@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock, Paper, Scissors!</title>
+</head>
+<body>
+    <script>
+        game()
+
+        
+
+function game(){
+
+        //////////////////// variable for user input ////////////////////////
+    
+        let playerSelection = prompt("Choose: Rock, Paper or Scissors!");
+
+        //////////////////// random numbers for computers turns ///////////////////
+
+        let computerChoice = Math.floor(Math.random() * 3);
+        
+        ///////////////// global variable for input ////////////////////
+
+        let playerChoice;
+
+        ///////////////////////////////////////// Here i set conditions what user can input to play////////////////////////
+        
+
+        if (playerSelection == "Rock" || playerSelection == "rock" || playerSelection == "ROCK" ) { // prebacivanje vrednosti iz reci koju igrac unese u broj kako bih ga uporedio sa kompovim izborom
+
+             playerChoice = 0 ;
+
+        } else if (playerSelection == "Paper" || playerSelection == "paper" || playerSelection == "PAPER" ) {
+
+             playerChoice = 1 ;
+
+        } else if (playerSelection == "Scissors" || playerSelection == "scissors" || playerSelection == "SCISSORS") {
+
+             playerChoice = 2 ;
+
+        } else {
+
+            console.log("Check again what you typed!");
+        }
+
+
+        /////////////////////////////////////////  playing a game //////////////////////////////////////
+       
+
+        if (computerChoice == 0) {
+
+            if(playerChoice == 0) {
+
+                console.log("Its tied! Try again!");
+            }
+
+            else if(playerChoice == 1) {
+
+                console.log("You won! Paper beats rock!");
+            }
+
+            else if(playerChoice == 2) {
+
+                console.log("You lose! Rock beats scissors!");
+            }
+
+        } else if(computerChoice == 1) {
+
+            if(playerChoice == 0) {
+
+                console.log("You lose! Paper beats rock!");
+            }
+
+            else if(playerChoice == 1) {
+
+                console.log("Its tied! Try again!");
+            }
+
+            else if(playerChoice == 2) {
+
+                console.log("You won! Scissors beats paper!");
+            }
+
+        } else if(computerChoice == 2) {
+
+            if(playerChoice == 0) {
+
+                console.log("You won! Rock beats scissors!");
+            }
+
+            else if(playerChoice == 1) {
+
+                console.log("You lost! Scissors beats paper!");
+            }
+
+            else if(playerChoice == 2) {
+
+                console.log("Its tied! Try again!");
+            }
+        
+    }
+        
+
+}
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    </script>
+    
+</body>
+</html>
